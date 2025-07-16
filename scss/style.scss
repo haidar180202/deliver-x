@@ -1,0 +1,412 @@
+// Warna global dan font umum
+$text-orange: #ff5722;
+$text-dark: #111;
+$text-muted: #666;
+$bg-white: #fff;
+$border-radius: 16px;
+$font-family-base: 'Poppins', sans-serif;
+
+body {
+  font-family: $font-family-base;
+  background: $bg-white;
+  margin: 0;
+  color: #222;
+
+  // Kelas utility untuk warna oranye bisa dipakai di mana saja
+  .text-orange {
+    color: $text-orange;
+  }
+
+  header {
+    border-bottom: 1px solid #eee;
+    .logo {
+      font-size: 1.25rem;
+      color: #000;
+    }
+    nav {
+      .nav-link {
+        color: #555;
+        &.active, &:hover {
+          color: $text-orange;
+          font-weight: 600;
+        }
+      }
+    }
+    .btn {
+      &.btn-outline-secondary {
+        border-color: #ddd;
+        color: #222;
+      }
+      &.btn-danger {
+        background-color: $text-orange;
+        border: none;
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .circle-bg {
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      width: 300px;
+      height: 300px;
+      background-color: $text-orange;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .delivery-person {
+      position: relative;
+      width: 480px;
+      z-index: 2;
+      border-radius: $border-radius;
+      // tambahkan overflow hidden jika ingin rounded corner juga ke image anaknya
+    }
+
+    .burger-card {
+      position: absolute;
+      top: 35%;
+      right: 60%;
+      width: 45%;
+      background: $bg-white;
+      z-index: 3;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+
+      .burger-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .burger-info {
+        h5 {
+          font-weight: 600;
+          margin-bottom: 0.2rem;
+        }
+        .rating {
+          font-size: 0.9rem;
+          color: #f4b400;
+          span {
+            color: #ccc;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .delivery-time-card {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      background: $bg-white;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+      width: 260px;
+      z-index: 3;
+
+      .scooter-icon {
+        width: 100%;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Bagian khusus About Us menggunakan styling global tapi dengan tambahan spesifik
+.about-us-section {
+  @extend body; // atau hanya ambil yang diperlukan dari global, jika SCSS Anda diatur seperti modul
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 1rem;
+  background-color: $bg-white;
+  font-family: $font-family-base;
+  color: $text-dark;
+
+  .about-us-image {
+    flex: 1 1 40%;
+    border-radius: $border-radius;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: $border-radius;
+      object-fit: cover;
+    }
+  }
+
+  .about-us-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+
+    .subheading {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $text-orange; // pakai warna global orange
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1.5px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      color: $text-dark;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $text-muted;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .about-us-image {
+      max-width: 320px;
+      margin-bottom: 2rem;
+    }
+
+    .about-us-content {
+      max-width: 100%;
+
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+.our-journey {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+  .text-orange {
+    color: #ff6600; // or sesuai brand kamu
+  }
+
+  .btn-orange {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 0.375rem; // rounded-md
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#ff6600, 10%);
+      box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5);
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .journey-card {
+    background: white;
+    border-radius: 0.5rem; // rounded-lg
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(50px); // initial offset for GSAP animasi
+    // opacity: 0;                  // initial hidden for GSAP animasi
+    pointer-events: none;        // disable klik saat hidden
+    transition: pointer-events 0.3s ease;
+
+    .year {
+      font-size: 1.125rem; // slightly bigger year
+    }
+    
+    h5 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666666;
+    }
+  }
+
+  // Optional: container column gap handled by flex-column gap in HTML
+  // Jika perlu responsive tweaks bisa ditambahkan disini
+  
+
+}
+
+
+// Footer section, contoh modular sederhana
+$text-orange: #ff5722;
+$text-dark: #111;
+$text-muted: #6c757d;
+$btn-danger-bg: #ff5722;
+$btn-danger-color: #fff;
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-desc {
+      max-width: 320px;
+      text-align: center;
+
+      @media(min-width: 768px) {
+        text-align: left;
+      }
+
+      img {
+        height: 40px;
+      }
+
+      p {
+        margin-top: 0.5rem;
+        color: $text-muted;
+      }
+    }
+
+    .download-buttons {
+      display: flex;
+      gap: 1rem;
+
+      a.btn-danger {
+        background-color: $btn-danger-bg;
+        color: $btn-danger-color;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0.375rem;
+        text-decoration: none;
+
+        svg {
+          fill: $btn-danger-color;
+        }
+      }
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    .nav-column {
+      margin-bottom: 1.5rem;
+
+      h5 {
+        font-weight: 700;
+        color: $text-dark;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $text-muted;
+            text-decoration: none;
+
+            &:hover {
+              color: $text-orange;
+              text-decoration: underline;
+            }
+          }
+
+          &.active {
+            color: $text-orange;
+            font-weight: 600;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .footer-locations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        > div {
+          flex: 1 1 45%;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          img {
+            width: 60px;
+            height: 36px;
+          }
+
+          span {
+            font-weight: 600;
+            color: $text-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    text-align: center;
+
+    small {
+      color: $text-muted;
+    }
+
+    a {
+      color: $text-orange;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+}
+
+

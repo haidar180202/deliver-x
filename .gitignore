@@ -1,0 +1,20 @@
+# Sass cache
+.sass-cache/
+
+# Node modules (jika ada)
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+
+# IDE/editor directories
+.vscode/
+.idea/
