@@ -22,6 +22,7 @@ body, body .about-us-section {
       background-color: #ff5722;
       border: none; }
   body .hero {
+    background-color: #f8f9fa;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,6 +160,89 @@ body, body .about-us-section {
       body .our-journey .journey-card p {
         font-size: 1rem;
         color: #666666; }
+  body .partners-section {
+    text-align: center;
+    padding: 3rem 0; }
+    body .partners-section p.accent-text {
+      text-transform: uppercase;
+      color: #f15a24;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem; }
+    body .partners-section h2.main-title {
+      font-weight: 900;
+      color: #222;
+      font-size: 2rem;
+      margin-bottom: 1rem; }
+    body .partners-section p.description {
+      color: #666;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
+      font-size: 1rem;
+      line-height: 1.5; }
+    body .partners-section .partner-card img {
+      width: 120px;
+      margin-bottom: 1rem; }
+    body .partners-section .partner-card h5.card-title {
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem; }
+    body .partners-section .partner-card p.card-desc {
+      color: #999;
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      max-width: 350px;
+      margin: 0 auto; }
+  body .press-news-section {
+    background-color: #f8f9fa;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center; }
+    body .press-news-section .accent-text {
+      color: #f15a24;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem; }
+    body .press-news-section .main-title {
+      font-weight: 900;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #222; }
+    body .press-news-section .news-card {
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      padding: 1.5rem;
+      height: 100%; }
+      body .press-news-section .news-card img {
+        width: 48px;
+        margin-bottom: 1rem; }
+      body .press-news-section .news-card .news-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #111;
+        text-align: left; }
+      body .press-news-section .news-card .read-more {
+        color: #f15a24;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 0.5rem; }
+        body .press-news-section .news-card .read-more:hover {
+          text-decoration: underline; }
+      body .press-news-section .news-card .news-date {
+        color: #6c757d;
+        font-size: 0.8rem;
+        text-align: right;
+        margin-top: auto; }
   body footer, body .about-us-section footer {
     background-color: #fff;
     border-top: 1px solid #ddd;
