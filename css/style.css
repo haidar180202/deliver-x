@@ -222,14 +222,18 @@ body, body .about-us-section {
       padding: 1.5rem;
       height: 100%; }
       body .press-news-section .news-card img {
-        width: 48px;
-        margin-bottom: 1rem; }
+        margin-bottom: 1rem;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: contain; }
       body .press-news-section .news-card .news-title {
         font-weight: 700;
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
-        color: #111;
-        text-align: left; }
+        color: #111; }
       body .press-news-section .news-card .read-more {
         color: #f15a24;
         font-weight: 600;
@@ -248,8 +252,7 @@ body, body .about-us-section {
     background-color: #fff;
     border-top: 1px solid #ddd;
     padding-top: 1.5rem;
-    padding-bottom: 3rem;
-    margin-top: 3rem; }
+    padding-bottom: 3rem; }
     body footer .footer-top {
       display: flex;
       flex-direction: column;
@@ -300,7 +303,7 @@ body, body .about-us-section {
           list-style: none;
           padding: 0; }
           body footer .footer-nav .nav-column ul li {
-            margin-bottom: 0.5rem; }
+            margin-bottom: 1.5rem; }
             body footer .footer-nav .nav-column ul li a {
               color: #6c757d;
               text-decoration: none; }
@@ -334,7 +337,7 @@ body, body .about-us-section {
     body footer .footer-bottom {
       border-top: 1px solid #ddd;
       padding-top: 1rem;
-      text-align: center; }
+      text-align: left; }
       body footer .footer-bottom small {
         color: #6c757d; }
       body footer .footer-bottom a {

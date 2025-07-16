@@ -321,70 +321,76 @@ body {
     }
   }
 
+.press-news-section {
+  background-color: #f8f9fa; 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
 
-  .press-news-section {
-    background-color: #f8f9fa; // warna latar abu muda
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    text-align: center;
+  .accent-text {
+    color: #f15a24;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
 
-    .accent-text {
-      color: #f15a24;
-      text-transform: uppercase;
+  .main-title {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+
+  .news-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1.5rem;
+    height: 100%;
+
+    // Hapus width supaya inline style (width: 140px) pada img tetap berlaku
+    img {
+      // width: 48px; // HAPUS INI
+      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      object-fit: contain;
+    }
+
+    .news-title {
       font-weight: 700;
-      letter-spacing: 0.1em;
+      font-size: 1.1rem;
       margin-bottom: 0.5rem;
-      font-size: 0.85rem;
+      color: #111;
     }
 
-    .main-title {
-      font-weight: 900;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #222;
+    .read-more {
+      color: #f15a24;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    .news-card {
-      background: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-      padding: 1.5rem;
-      height: 100%;
-
-      img {
-        width: 48px;
-        margin-bottom: 1rem;
-      }
-
-      .news-title {
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        color: #111;
-        text-align: left;
-      }
-
-      .read-more {
-        color: #f15a24;
-        font-weight: 600;
-        font-size: 0.875rem;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 0.5rem;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      .news-date {
-        color: #6c757d;
-        font-size: 0.8rem;
-        text-align: right;
-        margin-top: auto;
-      }
+    .news-date {
+      color: #6c757d;
+      font-size: 0.8rem;
+      text-align: right;
+      margin-top: auto;
     }
   }
+}
+
 
 
   // Footer section, contoh modular sederhana
@@ -399,7 +405,6 @@ body {
     border-top: 1px solid #ddd;
     padding-top: 1.5rem;
     padding-bottom: 3rem;
-    margin-top: 3rem;
 
     .footer-top {
       display: flex;
@@ -527,7 +532,7 @@ body {
     .footer-bottom {
       border-top: 1px solid #ddd;
       padding-top: 1rem;
-      text-align: center;
+      text-align: left;
 
       small {
         color: $text-muted;

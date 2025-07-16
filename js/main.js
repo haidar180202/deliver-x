@@ -9,24 +9,3 @@ gsap.from(".burger-card", { duration: 1, y: 50, opacity: 0, delay: 2 });
 gsap.from(".delivery-time-card", { duration: 1, y: 50, opacity: 0, delay: 2.2 });
 
 gsap.registerPlugin(ScrollTrigger);
-
-gsap.registerPlugin(ScrollTrigger);
-
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top center",
-    toggleActions: "play none none none"
-  },
-  defaults: { ease: "power3.out" }
-});
-
-tl.from("header", { duration: 1, y: -50, opacity: 0 })
-  .from(".text-content small", { duration: 0.7, x: -20, opacity: 0 }, ">0.5")
-  .from(".text-content h1", { duration: 1, x: -50, opacity: 0 }, ">0.2")
-  .from(".text-content p", { duration: 1, x: -30, opacity: 0 }, ">0.2")
-  .from(".circle-bg", { duration: 1, scale: 0, opacity: 0 }, ">0.3")
-  .from(".delivery-person", { duration: 1, x: 100, opacity: 0 }, ">0.2")
-  .from(".burger-card", { duration: 1, y: 50, opacity: 0 }, ">0.2")
-  .from(".delivery-time-card", { duration: 1, y: 50, opacity: 0 }, ">0.2");
-
